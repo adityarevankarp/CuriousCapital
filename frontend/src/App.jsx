@@ -2,17 +2,17 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 import React, { Component } from "react";
 import LandingPage from "./Pages/LandingPage";
-import Hero from "./Components/Hero";
 import AboutPage from "./Pages/AboutPage";
 import Portfolio from "./Pages/Portfolio";
 import Blogs from "./Pages/Blogs";
 import Contact from "./Pages/Contact";
+import Navbar from "./Components/Navbar";
 
 
 function App() {
   return (
     <>
-    
+      <Navbar/>
       <BrowserRouter>
         <div>
           <Routes>
