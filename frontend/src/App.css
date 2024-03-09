@@ -40,6 +40,32 @@
 .read-the-docs {
   color: #888;
 } */
+body {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+}
+.navi {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .bg-img {
   background-image: url("../src/assets/fotor-ai-2024022814519.jpg");
+}
+@media screen and (max-width: 768px) {
+  .navbar-custom {
+    align-items: start;
+    width: 100%;
+    height: 100vh;
+    border: 0px;
+  }
+  .navi {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-size: xx-large;
+  }
+  #logoid {
+    display: none;
+  }
 }
