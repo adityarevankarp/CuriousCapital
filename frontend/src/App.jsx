@@ -8,11 +8,10 @@ import Blogs from "./Pages/Blogs";
 import Contact from "./Pages/Contact";
 import Navbar from "./Components/Navbar";
 
-
 function App() {
   return (
     <>
-      <Navbar/>
+      {/* <Navbar/> */}
       <BrowserRouter>
         <div>
           <Routes>
