@@ -1,14 +1,20 @@
-
-import './App.css'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import "./App.css";
+import React, { Component } from "react";
+import LandingPage from "./Pages/LandingPage";
 
 function App() {
-  
-
   return (
     <>
-      <div className="text-3xl font-bold underline">CuriousCapital</div>
+      <BrowserRouter>
+        <div>
+          <Routes>
+            <Route path="/" element={<LandingPage />} />
+          </Routes>
+        </div>
+      </BrowserRouter>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
