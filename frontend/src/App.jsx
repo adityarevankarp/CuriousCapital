@@ -3,16 +3,24 @@ import "./App.css";
 import React, { Component } from "react";
 import LandingPage from "./Pages/LandingPage";
 import Hero from "./Components/Hero";
+import AboutPage from "./Pages/AboutPage";
+import Portfolio from "./Pages/Portfolio";
+import Blogs from "./Pages/Blogs";
+import Contact from "./Pages/Contact";
 
 
 function App() {
   return (
     <>
+    
       <BrowserRouter>
         <div>
           <Routes>
             <Route path="/" element={<LandingPage />} />
-            
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/portfolio" element={<Portfolio />} />
+            <Route path="/blogs" element={<Blogs />} />
+            <Route path="/contact" element={<Contact />} />
           </Routes>
         </div>
       </BrowserRouter>
