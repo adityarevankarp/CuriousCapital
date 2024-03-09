@@ -6,7 +6,7 @@ function App() {
 
   return (
     <>
-      <div>CuriousCapital</div>
+      <div className="text-3xl font-bold underline">CuriousCapital</div>
     </>
   )
 }
