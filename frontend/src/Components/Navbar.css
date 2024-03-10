@@ -1,0 +1,29 @@
+.navbar-custom li a:hover {
+  color: #ff69b4; /* Pink color */
+  transition-duration: 0.1s;
+  transition-timing-function: linear;
+  transition-delay: 0.1s;
+  /* Add underline on hover */
+}
+
+.navbar-custom li a {
+  position: relative;
+  padding-bottom: 5px; /* Add extra space between text and underline */
+  /* Add transition for padding change */
+  transition-duration: 0.1s;
+  transition-timing-function: linear;
+  transition-delay: 0.1s;
+}
+
+.navbar-custom li a:hover::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px; /* Adjust the thickness of the underline */
+  background-color: #ff69b4; /* Pink color */
+  transition-duration: 0.1s;
+  transition-timing-function: linear;
+  transition-delay: 0.1s;
+}
