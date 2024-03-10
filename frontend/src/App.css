@@ -55,16 +55,12 @@ body {
 }
 @media screen and (max-width: 768px) {
   .navbar-custom {
-    align-items: start;
-    width: 100%;
-    height: 100vh;
+    gap: 4rem;
     border: 0px;
+    margin-bottom: 100%;
   }
-  .navi {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    font-size: xx-large;
+  .custom-nav {
+    margin-right: auto;
   }
   #logoid {
     display: none;
