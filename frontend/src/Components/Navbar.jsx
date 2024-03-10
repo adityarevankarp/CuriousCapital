@@ -1,15 +1,16 @@
 import React, { useState } from "react";
 import logo from "../assets/Curious Capital Logo (Final) W.png";
-
+import "./Navbar.css";
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
+
   return (
-    <nav style={{ backgroundColor: "rgba(0,0,0,0.3)" }} className="navi">
-      <div className="max-w-screen-xl lg:mx-auto p-4 custom-nav">
+    <nav style={{ backgroundColor: "rgba(0,0,0,0.05)" }} className="navi">
+      <div className="max-w-screen-xl lg:mx-auto p-8 custom-nav">
         <button
           onClick={toggleMobileMenu}
           data-collapse-toggle="navbar-default"
@@ -41,43 +42,47 @@ const Navbar = () => {
           } sm:flex transition ease-in-out duration-700 transform`}
           id="navbar-default"
         >
-          <ul className="navbar-custom lg:gap-24 md:gap-24 sm:gap-20 sm:justify-start text-white text-xl font-bold flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-transparent md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-transparent dark:bg-transparent md:dark:bg-transparent ">
-            <li>
+          <ul className="navbar-custom lg:gap-24 md:gap-24 sm:gap-20 sm:justify-start text-white text-xl font-bold flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-transparent md:flex-row md:space-x-0 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-transparent dark:bg-transparent md:dark:bg-transparent ">
+            <li style={{ marginRight: "-1em" }}>
               <a
+                style={{ fontWeight: "400", fontSize: "1em" }}
                 href="/"
-                className="block  py-2 px-3 rounded md:bg-transparent md:dark:hover:text-pink-200   md:p-0 dark:text-white md:dark:text-white-500"
+                className="block py-2 px-3  rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-pink-200 dark:hover:bg-transparent"
                 aria-current="page"
               >
                 Home
               </a>
             </li>
-            <li>
+            <li style={{ marginRight: "-1em" }}>
               <a
+                style={{ fontWeight: "400", fontSize: "1em" }}
                 href="/about"
                 className="block py-2 px-3  rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-pink-200 dark:hover:bg-transparent"
               >
                 About
               </a>
             </li>
-            <li id="logoid">
+            <li id="logoid" style={{ marginRight: "-1em", marginTop:'-0.5em' }}>
               <a
                 href="/"
                 className="flex items-center space-x-3 rtl:space-x-reverse "
               >
-                <img src={logo} className="h-8 logo" alt="" />
+                <img src={logo} className="h-12 logo" alt="" />
               </a>
             </li>
 
-            <li>
+            <li style={{ marginRight: "-1em" }}>
               <a
+                style={{ fontWeight: "400", fontSize: "1em" }}
                 href="/portfolio"
                 className="block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-pink-200 dark:hover:bg-transparent"
               >
                 Portfolio
               </a>
             </li>
-            <li>
+            <li style={{ marginRight: "-1em" }}>
               <a
+                style={{ fontWeight: "400", fontSize: "1em" }}
                 href="/blogs"
                 className="block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-pink-200 dark:hover:bg-transparent"
               >
