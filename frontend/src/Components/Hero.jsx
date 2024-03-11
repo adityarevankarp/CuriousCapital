@@ -32,7 +32,7 @@ const Hero = () => {
         id="your-element-selector"
         style={{ width: "100%", height: "100vh" }}
       >
-        <Navbar />
+        
       </div>
     </>
   );

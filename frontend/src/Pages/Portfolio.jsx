@@ -5,7 +5,7 @@ function Portfolio() {
   return (
     <div>
       <div>
-        <Hero />
+        
       </div>
     </div>
   );

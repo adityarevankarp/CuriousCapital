@@ -5,7 +5,7 @@ import Hero from "../Components/Hero";
 function AboutPage() {
   return (
     <div>
-      <Hero />
+      
     </div>
   );
 }

@@ -4,7 +4,7 @@ function Blogs() {
   return (
     <div>
       <div>
-        <Hero />
+        
       </div>
     </div>
   );

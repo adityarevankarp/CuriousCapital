@@ -7,7 +7,7 @@ import Portfolio from "./Pages/Portfolio";
 import Blogs from "./Pages/Blogs";
 import Contact from "./Pages/Contact";
 import Navbar from "./Components/Navbar";
-
+import Hero from './Components/Hero';
 function App() {
   return (
     <>
