@@ -30,10 +30,9 @@ const Hero = () => {
     <>
       <div
         id="your-element-selector"
+        className="-z-1 fixed"
         style={{ width: "100%", height: "100vh" }}
-      >
-        
-      </div>
+      ></div>
     </>
   );
 };

@@ -1,54 +1,41 @@
-/* #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* CustomScrollbar.css */
+
+/* Track */
+::-webkit-scrollbar {
+  width: 12px; /* Set the width of the scrollbar */
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background-color: #9b4479; /* Set the color of the scrollbar handle */
+  border-radius: 8px; /* Set the border radius of the handle */
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #e55db2; /* Change color on hover */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+/* Track on hover */
+::-webkit-scrollbar-track:hover {
+  background-color: #5a3698; /* Change color on track hover */
+}
+::-webkit-scrollbar-track {
+  background-color: #23153c; /* Change color on track hover */
 }
 
-.card {
-  padding: 2em;
+/* Button */
+::-webkit-scrollbar-button {
+  display: none; /* Hide the scrollbar buttons (if any) */
 }
-
-.read-the-docs {
-  color: #888;
-} */
-body {
-  font-family: "Inter", sans-serif;
-  font-weight: 400;
+* {
+  font-family: "Inter", medium;
+  font-weight: 300;
 }
 .navi {
   display: flex;
   justify-content: center;
   align-items: center;
-  
 }
 .bg-img {
   background-image: url("../src/assets/fotor-ai-2024022814519.jpg");

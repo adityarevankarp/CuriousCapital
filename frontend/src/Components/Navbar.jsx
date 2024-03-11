@@ -1,15 +1,17 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import logo from "../assets/Curious Capital Logo (Final) W.png";
-
+import "./Navbar.css";
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
+
   return (
-    <nav style={{ backgroundColor: "rgba(0,0,0,0.3)" }} className="navi">
-      <div className="max-w-screen-xl lg:mx-auto p-4 custom-nav">
+    <nav style={{ backgroundColor: "rgba(0,0,0,0.05)" }} className="navi">
+      <div className="max-w-screen-xl lg:mx-auto p-8 custom-nav">
         <button
           onClick={toggleMobileMenu}
           data-collapse-toggle="navbar-default"
@@ -41,48 +43,55 @@ const Navbar = () => {
           } sm:flex transition ease-in-out duration-700 transform`}
           id="navbar-default"
         >
-          <ul className="navbar-custom lg:gap-24 md:gap-24 sm:gap-20 sm:justify-start text-white text-xl font-bold flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-transparent md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-transparent dark:bg-transparent md:dark:bg-transparent ">
-            <li>
-              <a
-                href="/"
-                className="block  py-2 px-3 rounded md:bg-transparent md:dark:hover:text-pink-200   md:p-0 dark:text-white md:dark:text-white-500"
+          <ul className="navbar-custom lg:gap-24 md:gap-24 sm:gap-20 sm:justify-start text-white text-xl font-bold flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-transparent md:flex-row md:space-x-0 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-transparent dark:bg-transparent md:dark:bg-transparent ">
+            <li style={{ marginRight: "-1em" }}>
+              <Link
+                style={{ fontWeight: "400", fontSize: "1em" }}
+                to="/"
+                className="block py-2 px-3  rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-pink-200 dark:hover:bg-transparent"
                 aria-current="page"
               >
                 Home
-              </a>
+              </Link>
             </li>
-            <li>
-              <a
-                href="/about"
+            <li style={{ marginRight: "-1em" }}>
+              <Link
+                style={{ fontWeight: "400", fontSize: "1em" }}
+                to="/about"
                 className="block py-2 px-3  rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-pink-200 dark:hover:bg-transparent"
               >
                 About
-              </a>
+              </Link>
             </li>
-            <li id="logoid">
-              <a
-                href="/"
+            <li
+              id="logoid"
+              style={{ marginRight: "-1em", marginTop: "-0.5em" }}
+            >
+              <Link
+                to="/"
                 className="flex items-center space-x-3 rtl:space-x-reverse "
               >
-                <img src={logo} className="h-8 logo" alt="" />
-              </a>
+                <img src={logo} className="h-12 logo" alt="" />
+              </Link>
             </li>
 
-            <li>
-              <a
-                href="/portfolio"
+            <li style={{ marginRight: "-1em" }}>
+              <Link
+                style={{ fontWeight: "400", fontSize: "1em" }}
+                to="/portfolio"
                 className="block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-pink-200 dark:hover:bg-transparent"
               >
                 Portfolio
-              </a>
+              </Link>
             </li>
-            <li>
-              <a
-                href="/blogs"
+            <li style={{ marginRight: "-1em" }}>
+              <Link
+                style={{ fontWeight: "400", fontSize: "1em" }}
+                to="/blogs"
                 className="block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-pink-200 dark:hover:bg-transparent"
               >
                 Blogs
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
