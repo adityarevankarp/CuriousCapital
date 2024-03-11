@@ -7,22 +7,25 @@ import Portfolio from "./Pages/Portfolio";
 import Blogs from "./Pages/Blogs";
 import Contact from "./Pages/Contact";
 import Navbar from "./Components/Navbar";
+import { BackgroundProvider } from "./BackgroundContext.jsx";
 
 function App() {
   return (
     <>
-      {/* <Navbar/> */}
-      <BrowserRouter>
-        <div>
-          <Routes>
-            <Route path="/" element={<LandingPage />} />
-            <Route path="/about" element={<AboutPage />} />
-            <Route path="/portfolio" element={<Portfolio />} />
-            <Route path="/blogs" element={<Blogs />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
-        </div>
-      </BrowserRouter>
+      <BackgroundProvider>
+        {/* <Navbar/> */}
+        <BrowserRouter>
+          <div>
+            <Routes>
+              <Route path="/" element={<LandingPage />} />
+              <Route path="/about" element={<AboutPage />} />
+              <Route path="/portfolio" element={<Portfolio />} />
+              <Route path="/blogs" element={<Blogs />} />
+              <Route path="/contact" element={<Contact />} />
+            </Routes>
+          </div>
+        </BrowserRouter>
+      </BackgroundProvider>
     </>
   );
 }
