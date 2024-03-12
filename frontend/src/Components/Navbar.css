@@ -27,3 +27,46 @@
   transition-timing-function: linear;
   transition-delay: 0.1s;
 }
+.navi {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bg-img {
+  background-image: url("../src/assets/fotor-ai-2024022814519.jpg");
+}
+@media screen and (max-width: 768px) {
+  .navbar-custom {
+    gap: 4rem;
+    border: 0px;
+    /* margin-bottom: 100%; */
+  }
+  .custom-nav {
+    margin-right: auto;
+  }
+  #logoid {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .navbar-custom {
+    gap: 3rem;
+    border: 0px;
+    height: 100vh;
+    font-size: x-large !important;
+
+    /* margin-bottom: 100%; */
+  }
+  .navi {
+    background: rgba(0, 0, 0, 0.102);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(6.5px);
+    -webkit-backdrop-filter: blur(6.5px);
+  }
+  .custom-nav {
+    margin-right: auto;
+  }
+  #logoid {
+    display:none;
+  }
+}
