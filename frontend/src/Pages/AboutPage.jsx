@@ -10,6 +10,7 @@ function AboutPage() {
         <div className="h-auto w-auto z-1 relative">
           <Navbar />
         </div>
+        <div className="mx-auto"> 
         <div className="relative z-1 flex flex-col justify-center items-start p-20 mx-auto">
           <p className="text-[#e55db2] text-3xl font-bold">About</p>
           <p className="text-xl text-white my-5 font-normal">
@@ -18,6 +19,8 @@ function AboutPage() {
             allows great founders to build and their protocols to thrive.{" "}
           </p>
         </div>
+        </div>
+        
         <div className="relative z-1 flex flex-col justify-end items-center w-screen h-screen">
           <Footer />
         </div>
