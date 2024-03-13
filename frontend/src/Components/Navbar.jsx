@@ -10,7 +10,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav style={{ backgroundColor: "rgba(0,0,0,0.05)" }} className="navi">
+    <nav style={{ backgroundColor: "rgba(0,0,0,0.15)" }} className="navi">
       <div className="max-w-screen-xl lg:mx-auto p-8 custom-nav">
         <button
           onClick={toggleMobileMenu}
@@ -44,25 +44,6 @@ const Navbar = () => {
           id="navbar-default"
         >
           <ul className="navbar-custom lg:gap-24 md:gap-24 sm:gap-20 sm:justify-start text-white text-xl font-bold flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-transparent md:flex-row md:space-x-0 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-transparent dark:bg-transparent md:dark:bg-transparent ">
-            <li style={{ marginRight: "-1em" }}>
-              <Link
-                style={{ fontWeight: "400", fontSize: "1em" }}
-                to="/"
-                className="block py-2 px-3  rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-pink-200 dark:hover:bg-transparent"
-                aria-current="page"
-              >
-                Home
-              </Link>
-            </li>
-            <li style={{ marginRight: "-1em" }}>
-              <Link
-                style={{ fontWeight: "400", fontSize: "1em" }}
-                to="/about"
-                className="block py-2 px-3  rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-pink-200 dark:hover:bg-transparent"
-              >
-                About
-              </Link>
-            </li>
             <li
               id="logoid"
               style={{ marginRight: "-1em", marginTop: "-0.5em" }}
@@ -70,14 +51,79 @@ const Navbar = () => {
               <Link
                 to="/"
                 className="flex items-center space-x-3 rtl:space-x-reverse "
+                style={{
+                  filter: "drop-shadow(9px 9px 8px #010101)",
+                }}
               >
                 <img src={logo} className="h-12 logo" alt="" />
               </Link>
             </li>
+            <li
+              className="block sm:hidden "
+              style={{ marginRight: "-1em" }}
+              id="home-id"
+            >
+              <Link
+                style={{
+                  fontWeight: "400",
+                  fontSize: "1em",
+                  filter: "drop-shadow(9px 9px 8px #010101)",
+                }}
+                to="/"
+                className="block py-2 px-3  rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-pink-200 dark:hover:bg-transparent"
+              >
+                Home
+              </Link>
+            </li>
+            <li style={{ marginRight: "-1em" }}>
+              <Link
+                style={{
+                  fontWeight: "400",
+                  fontSize: "1em",
+                  filter: "drop-shadow(9px 9px 8px #010101)",
+                }}
+                to="/about"
+                className="block py-2 px-3  rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-pink-200 dark:hover:bg-transparent"
+              >
+                About
+              </Link>
+            </li>
+            <li style={{ marginRight: "-1em" }}>
+              <Link
+                style={{
+                  fontWeight: "400",
+                  fontSize: "1em",
+                  filter: "drop-shadow(9px 9px 8px #010101)",
+                }}
+                to="/faqs"
+                className="block py-2 px-3  rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-pink-200 dark:hover:bg-transparent"
+                aria-current="page"
+              >
+                FAQs
+              </Link>
+            </li>
+            {/* <li style={{ marginRight: "-1em" }}>
+              <Link
+                style={{
+                  fontWeight: "400",
+                  fontSize: "1em",
+                  filter: "drop-shadow(9px 9px 8px #010101)",
+                }}
+                to="/faqs"
+                className="block py-2 px-3  rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-pink-200 dark:hover:bg-transparent"
+                aria-current="page"
+              >
+                Services
+              </Link>
+            </li> */}
 
             <li style={{ marginRight: "-1em" }}>
               <Link
-                style={{ fontWeight: "400", fontSize: "1em" }}
+                style={{
+                  fontWeight: "400",
+                  fontSize: "1em",
+                  filter: "drop-shadow(9px 9px 8px #010101)",
+                }}
                 to="/portfolio"
                 className="block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-pink-200 dark:hover:bg-transparent"
               >
@@ -86,7 +132,24 @@ const Navbar = () => {
             </li>
             <li style={{ marginRight: "-1em" }}>
               <Link
-                style={{ fontWeight: "400", fontSize: "1em" }}
+                style={{
+                  fontWeight: "400",
+                  fontSize: "1em",
+                  filter: "drop-shadow(9px 9px 8px #010101)",
+                }}
+                to="/contact"
+                className="block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-pink-200 dark:hover:bg-transparent"
+              >
+                Contact
+              </Link>
+            </li>
+            <li style={{ marginRight: "-1em" }}>
+              <Link
+                style={{
+                  fontWeight: "400",
+                  fontSize: "1em",
+                  filter: "drop-shadow(9px 9px 14px #010101)",
+                }}
                 to="/blogs"
                 className="block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-pink-200 dark:hover:bg-transparent"
               >
