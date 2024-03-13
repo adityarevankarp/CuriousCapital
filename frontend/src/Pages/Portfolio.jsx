@@ -17,10 +17,10 @@ function Portfolio() {
     <div>
       <div className="overflow-x-hidden">
         <Hero />
-        <div className="h-auto w-auto z-1 relative">
-          <Navbar />
+        <div className="h-auto w-auto z-1">
+          <Navbar/>
         </div>
-        <div className="mx-auto xl:mx-78 2xl:mx-88 md:mx-6 sm:mx-0 lg:mx-24 4xl:mx-98 imac:mx-180">
+        <div className="relative mx-auto sm:mx-0 md:mx-6 lg:mx-24 xl:mx-78 2xl:mx-88 4xl:mx-98 imac:mx-180">
           <div className="relative z-1 flex flex-col justify-center items-start p-20 mx-auto">
             <p
               className="text-[#e55db2] text-3xl font-bold"
@@ -29,16 +29,18 @@ function Portfolio() {
               Portfolio
             </p>
             <p
-              className="text-xl text-white my-5 font-normal"
-              style={{ fontFamily: "Inter" }}
+              className="text-xl text-white my-5 font-normal text-justify"
+              style={{ fontFamily: "Inter" }} 
             >
               CURIOUS CAPITAL invests in generational crypto startups who lay
               the foundation for our growing ecosystem. Our operational
               excellence allows great founders to build and their protocols to
-              thrive.{" "}
+              thrive.
             </p>
             {/* //3xl:grid grid-cols-4 gap-16 sm:grid grid-cols-3 gap-12 */}
-            <div className="grid grid-cols-4 gap-16 sm:grid-cols-3 4xl:grid-cols-4 gap-16 md:grid-cols-3 gap-16 lg:grid-cols-4 ">
+            {/* grid grid-cols-4 gap-16 sm:grid-cols-3 4xl:grid-cols-4 gap-16 md:grid-cols-3 gap-16 lg:grid-cols-4 */}
+            {/* grid-cols-1 gap-5 xxs:m-10 gap-5 xs:grid-cols-2 s:grid-cols-2 s:gap-x-16 sm:grid-cols-4 lg:grid-cols-4 ssm:grid-cols-2 ssm:gap-x-16  */}
+            <div className="grid grid-cols-1 gap-5 justify-items-stretch xxs:m-10 gap-5 xs:grid-cols-2 s:grid-cols-2 s:gap-x-16 sm:grid-cols-4 lg:grid-cols-4 ssm:grid-cols-2 ssm:gap-x-16">
               <Card logo_url={p1}/>
               <Card logo_url={p2}/>
               <Card logo_url={p3}/>
