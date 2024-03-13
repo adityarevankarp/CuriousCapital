@@ -2,7 +2,7 @@ import React from "react";
 import Hero from "../Components/Hero";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
-import "./Portfolio.css";
+import "./Css/Portfolio.css";
 import Card from "../Components/Card";
 import p1 from '../assets/Portfolio_assets/alchemix.png'
 import p2 from '../assets/Portfolio_assets/anboto.png'

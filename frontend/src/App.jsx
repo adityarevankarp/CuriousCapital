@@ -6,8 +6,9 @@ import AboutPage from "./Pages/AboutPage";
 import Portfolio from "./Pages/Portfolio";
 import Blogs from "./Pages/Blogs";
 import Contact from "./Pages/Contact";
-import Navbar from "./Components/Navbar";
+// import Navbar from "./Components/Navbar";
 import { BackgroundProvider } from "./BackgroundContext.jsx";
+import FaqPage from "./Pages/FaqPage.jsx";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
               <Route path="/portfolio" element={<Portfolio />} />
               <Route path="/blogs" element={<Blogs />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/faqs" element={<FaqPage />} />
             </Routes>
           </div>
         </BrowserRouter>
