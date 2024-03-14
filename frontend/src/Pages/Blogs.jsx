@@ -34,9 +34,15 @@ function Blogs() {
         </div>
         {/* Actual Blogs */}
         <div className="relative mx-auto sm:mx-0 md:mx-6 lg:mx-24 xl:mx-78 2xl:mx-88 4xl:mx-98 imac:mx-180">
-          <section className="text-gray-400 bg-transparent body-font overflow-hidden">
-            <div className="container px-5 py-24 mx-auto">
-              <div className="-my-8 divide-y-2 divide-gray-800">
+          <p
+            className="text-[#e55db2] text-4xl font-bold text-center my-8"
+            style={{ fontFamily: "Bebas Neue" }}
+          >
+            BLOGS
+          </p>
+          <section className="text-gray-400 bg-transparent body-font overflow-hidden ">
+            <div className="container px-5 py-24 mx-auto blog-bg">
+              <div className="-my-8 divide-y-2 divide-gray-800 ">
                 {blogs.map((blog, index) => (
                   <div
                     key={index}

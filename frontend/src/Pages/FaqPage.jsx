@@ -36,15 +36,18 @@ function FaqPage() {
       <div className="mx-auto relative">
         <section className="bg-transparent">
           <div className="container max-w-4xl px-6 py-10 mx-auto">
-            <h1 className="text-2xl font-semibold text-center text-gray-800 lg:text-3xl dark:text-white">
-              Frequently Asked Questions
-            </h1>
+            <p
+              className="text-[#e55db2] text-4xl font-bold text-center my-2"
+              style={{ fontFamily: "Bebas Neue" }}
+            >
+              FAQs
+            </p>
 
-            <div className="mt-12 space-y-8">
+            <div className="mt-12 space-y-8 ">
               {FAQs.map((faq, index) => (
                 <div
                   key={index}
-                  className="border-2 border-gray-100 rounded-lg dark:border-gray-700"
+                  className="border-2 border-gray-100 rounded-lg dark:border-gray-700 faq-bg"
                 >
                   <button className="flex items-center justify-between w-full p-8">
                     <h1 className="font-semibold text-gray-700 dark:text-white">

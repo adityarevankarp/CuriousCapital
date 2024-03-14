@@ -53,3 +53,22 @@
     display: none;
   }
 }
+.blog-bg {
+  background: rgba(31, 31, 31, 0.076) !important;
+  /* box-shadow: 0 2px 12px 0 rgba(31, 38, 135, 0.37); */
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: 4px;
+  border: 2px solid rgba(255, 255, 255, 0.157);
+}
+.faq-bg {
+  background: rgba(31, 31, 31, 0.076) !important;
+  /* box-shadow: 0 2px 12px 0 rgba(31, 38, 135, 0.37); */
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  border-radius: 4px;
+  /* border: 2px solid rgba(255, 255, 255, 0.157); */
+}
+svg {
+  color: #fff;
+}
