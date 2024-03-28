@@ -20,16 +20,16 @@ function Portfolio() {
         <div className="h-auto w-auto z-1">
           <Navbar />
         </div>
-        <div className="relative mx-auto sm:mx-0 md:mx-6 lg:mx-24 xl:mx-78 2xl:mx-88 4xl:mx-98 imac:mx-180">
-          <div className="relative z-1 flex flex-col justify-center items-center p-20 mx-auto">
+        <div className="sm:mx-0 md:mx-6 lg:mx-24 xl:mx-78 2xl:mx-88 4xl:mx-98 imac:mx-180">
+          <div className="relative z-1 flex flex-col justify-center items-center p-9 sm:p-20 sm:pt-5   ">
             <p
-              className="text-[#e55db2] text-4xl font-bold my-2"
+              className="text-[#e55db2] text-3xl font-bold my-2"
               style={{ fontFamily: "Bebas Neue" }}
             >
               Portfolio
             </p>
             <p
-              className="text-xl text-white my-4 font-normal text-justify"
+              className="text-xl text-white my-8 font-normal text-justify"
               style={{ fontFamily: "Inter" }}
             >
               CURIOUS CAPITAL invests in generational crypto startups who lay
@@ -40,7 +40,7 @@ function Portfolio() {
             {/* //3xl:grid grid-cols-4 gap-16 sm:grid grid-cols-3 gap-12 */}
             {/* grid grid-cols-4 gap-16 sm:grid-cols-3 4xl:grid-cols-4 gap-16 md:grid-cols-3 gap-16 lg:grid-cols-4 */}
             {/* grid-cols-1 gap-5 xxs:m-10 gap-5 xs:grid-cols-2 s:grid-cols-2 s:gap-x-16 sm:grid-cols-4 lg:grid-cols-4 ssm:grid-cols-2 ssm:gap-x-16  */}
-            <div className="grid grid-cols-1 gap-5 justify-items-stretch xxs:m-10 gap-5 xs:grid-cols-2 s:grid-cols-2 s:gap-x-16 sm:grid-cols-4 lg:grid-cols-4 ssm:grid-cols-2 ssm:gap-x-16">
+            <div className="grid grid-cols-1 justify-items-stretch xxs:m-10 gap-5 xs:grid-cols-2 s:grid-cols-2 s:gap-x-16 sm:grid-cols-4 lg:grid-cols-4 ssm:grid-cols-2 ssm:gap-x-16">
               <Card logo_url={p1} />
               <Card logo_url={p2} />
               <Card logo_url={p3} />
