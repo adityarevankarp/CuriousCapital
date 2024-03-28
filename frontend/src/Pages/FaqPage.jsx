@@ -56,13 +56,13 @@ function FaqPage() {
               {FAQs.map((faq, index) => (
                 <div
                   key={index}
-                  className="border-2 border-gray-100 rounded-lg dark:border-gray-700 faq-bg"
+                  className="border-2 border-gray-700 rounded-lg dark:border-gray-700 faq-bg"
                 >
                   <button
                     className="flex items-center justify-between w-full p-8"
                     onClick={() => toggleAnswer(index)}
                   >
-                    <h1 className="font-semibold text-gray-700 dark:text-white">
+                    <h1 className="font-semibold text-white">
                       {faq.question}
                     </h1>
 
@@ -84,7 +84,7 @@ function FaqPage() {
                     </span>
                   </button>
 
-                  <hr className="border-gray-200 dark:border-gray-700" />
+                  <hr className="border-gray-700 dark:border-gray-700" />
 
                   <p
                     className={`p-8 text-sm text-gray-500 dark:text-gray-300 ${
