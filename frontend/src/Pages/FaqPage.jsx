@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Hero from "../Components/Hero";
 import Footer from "../Components/Footer";
 import Navbar from "../Components/Navbar";
@@ -27,6 +27,15 @@ const FAQs = [
   },
 ];
 function FaqPage() {
+  const [visibleAnswers, setVisibleAnswers] = useState([]);
+
+  const toggleAnswer = (index) => {
+    setVisibleAnswers((prevState) => {
+      const newState = [...prevState];
+      newState[index] = !newState[index];
+      return newState;
+    });
+  };
   return (
     <div className="overflow-x-hidden">
       <Hero />
@@ -43,13 +52,16 @@ function FaqPage() {
               FAQs
             </p>
 
-            <div className="mt-12 space-y-8 ">
+            <div className="mt-12 space-y-8">
               {FAQs.map((faq, index) => (
                 <div
                   key={index}
                   className="border-2 border-gray-100 rounded-lg dark:border-gray-700 faq-bg"
                 >
-                  <button className="flex items-center justify-between w-full p-8">
+                  <button
+                    className="flex items-center justify-between w-full p-8"
+                    onClick={() => toggleAnswer(index)}
+                  >
                     <h1 className="font-semibold text-gray-700 dark:text-white">
                       {faq.question}
                     </h1>
@@ -74,7 +86,11 @@ function FaqPage() {
 
                   <hr className="border-gray-200 dark:border-gray-700" />
 
-                  <p className="p-8 text-sm text-gray-500 dark:text-gray-300">
+                  <p
+                    className={`p-8 text-sm text-gray-500 dark:text-gray-300 ${
+                      visibleAnswers[index] ? "" : "hidden"
+                    }`}
+                  >
                     {faq.answer}
                   </p>
                 </div>
