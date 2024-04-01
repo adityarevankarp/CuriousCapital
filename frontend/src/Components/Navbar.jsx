@@ -35,7 +35,7 @@ const Navbar = () => {
               d="M1 1h15M1 7h15M1 13h15"
             />
           </svg> */}
-          <img src={logo} className="h-8 w-20" alt="" />
+          <img src={logo} className="h-10" alt="" />
         </button>
         <div
           className={`w-full md:block md:w-auto ${
@@ -66,7 +66,7 @@ const Navbar = () => {
               <Link
                 style={{
                   fontWeight: "400",
-                  fontSize: "1em",
+                  fontSize: "0.9em",
                   filter: "drop-shadow(9px 9px 8px #010101)",
                 }}
                 to="/"
@@ -79,7 +79,7 @@ const Navbar = () => {
               <Link
                 style={{
                   fontWeight: "400",
-                  fontSize: "1em",
+                  fontSize: "0.9em",
                   filter: "drop-shadow(9px 9px 8px #010101)",
                 }}
                 to="/about"
@@ -92,7 +92,7 @@ const Navbar = () => {
               <Link
                 style={{
                   fontWeight: "400",
-                  fontSize: "1em",
+                  fontSize: "0.9em",
                   filter: "drop-shadow(9px 9px 8px #010101)",
                 }}
                 to="/faqs"
@@ -121,7 +121,7 @@ const Navbar = () => {
               <Link
                 style={{
                   fontWeight: "400",
-                  fontSize: "1em",
+                  fontSize: "0.9em",
                   filter: "drop-shadow(9px 9px 8px #010101)",
                 }}
                 to="/portfolio"
@@ -134,7 +134,7 @@ const Navbar = () => {
               <Link
                 style={{
                   fontWeight: "400",
-                  fontSize: "1em",
+                  fontSize: "0.9em",
                   filter: "drop-shadow(9px 9px 8px #010101)",
                 }}
                 to="/contact"
@@ -147,7 +147,7 @@ const Navbar = () => {
               <Link
                 style={{
                   fontWeight: "400",
-                  fontSize: "1em",
+                  fontSize: "0.9em",
                   filter: "drop-shadow(9px 9px 14px #010101)",
                 }}
                 to="/blogs"

@@ -11,7 +11,7 @@ function AboutPage() {
           <Navbar />
         </div>
         <div className="relative sm:mx-0 md:mx-6 lg:mx-24 xl:mx-78 2xl:mx-88 4xl:mx-98 imac:mx-180">
-          <div className="relative z-1 flex flex-col justify-center items-center  p-20 mx-auto">
+          <div className="relative z-1 flex flex-col justify-center items-center p-5 mx-auto">
             <p
               className="text-[#e55db2] text-3xl font-bold"
               style={{ fontFamily: "Bebas Neue" }}
