@@ -42,28 +42,25 @@ function Portfolio() {
               excellence allows great founders to build and their protocols to
               thrive.
             </p>
-            <div className="relative z-1 flex flex-col justify-center items-center p-4 sm:p-20 sm:pt-5">
-            <p
-              className="text-[#e55db2] text-3xl font-bold my-2"
-              style={{ fontFamily: "Bebas Neue" }}
-            >
-              PARTNERS
-            </p>
-            
+            <div className="relative z-1 flex flex-col justify-center items-center p-4 sm:p-8 sm:pt-5">
+              <p
+                className="text-[#e55db2] text-3xl font-bold my-2"
+                style={{ fontFamily: "Bebas Neue" }}
+              >
+                PARTNERS
+              </p>
             </div>
             <div className="grid grid-cols-2 justify-items-stretch xxs:m-10 gap-5 xs:grid-cols-3 s:grid-cols-4 s:gap-5 sm:grid-cols-4 lg:grid-cols-4 ssm:grid-cols-2 ssm:gap-x-16">
               <Card logo_url={p11} />
               <Card logo_url={p12} />
-              
             </div>
-            <div className="relative z-1 flex flex-col justify-center items-center p-0 sm:p-20 sm:pt-5">
-            <p
-              className="text-[#e55db2] text-3xl font-bold my-2"
-              style={{ fontFamily: "Bebas Neue" }}
-            >
-              majority holdings
-            </p>
-            
+            <div className="relative z-1 flex flex-col justify-center items-center p-0 sm:p-8 sm:pt-5">
+              <p
+                className="text-[#e55db2] text-3xl font-bold my-2"
+                style={{ fontFamily: "Bebas Neue" }}
+              >
+                majority holdings
+              </p>
             </div>
             {/* //3xl:grid grid-cols-4 gap-16 sm:grid grid-cols-3 gap-12 */}
             {/* grid grid-cols-4 gap-16 sm:grid-cols-3 4xl:grid-cols-4 gap-16 md:grid-cols-3 gap-16 lg:grid-cols-4 */}
