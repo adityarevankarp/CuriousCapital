@@ -38,7 +38,7 @@
   align-items: center;
 }
 .bg-img {
-  background-image: url("../src/assets/fotor-ai-2024022814519.jpg");
+  background-image: url("../src/assets/best.gif") !important;
 }
 @media screen and (max-width: 768px) {
   .navbar-custom {

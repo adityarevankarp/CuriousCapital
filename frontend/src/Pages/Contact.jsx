@@ -28,7 +28,11 @@ function Contact() {
                 <Spinner />
               </div>
               <div class="w-full h-40 flex items-center justify-center cursor-pointer my-10 sm:my-0">
+<<<<<<< team
                 <div class="relative inline-flex items-center justify-start py-3 pl-4 pr-12 overflow-hidden font-semibold shadow text-indigo-600 transition-all duration-150 ease-in-out rounded hover:pl-10 hover:pr-6 bg-gray-50 bg-gray-900 dark:text-white hover:text-gray-200 dark:shadow-none group">
+=======
+                <div class="relative inline-flex items-center justify-start py-3 pl-4 pr-12 overflow-hidden font-semibold shadow text-indigo-600 transition-all duration-150 ease-in-out rounded hover:pl-10 hover:pr-6  bg-gray-900 dark:text-white dark:hover:text-gray-200 dark:shadow-none group">
+>>>>>>> main
                   <button type="button" className="">
                     <a href="mailto:curioscapital@gmail.com">
                       <span class="absolute bottom-0 left-0 w-full h-1 transition-all duration-150 ease-in-out bg-indigo-900 group-hover:h-full"></span>
@@ -64,7 +68,7 @@ function Contact() {
                           ></path>
                         </svg>
                       </span>
-                      <span class="relative w-full text-left transition-colors duration-200 ease-in-out group-hover:text-white dark:group-hover:text-gray-200">
+                      <span class="relative w-full text-left transition-colors duration-200 ease-in-out group-hover:text-white ">
                         Send a mail
                       </span>
                     </a>
