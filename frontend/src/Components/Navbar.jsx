@@ -52,10 +52,10 @@ const Navbar = () => {
                 to="/"
                 className="flex items-center space-x-3 rtl:space-x-reverse "
                 style={{
-                  filter: "drop-shadow(9px 9px 8px #010101)",
+                  filter: "drop-shadow(3px 3px 3px #010101)",
                 }}
               >
-                <img src={logo} className="h-12 logo" alt="" />
+                <img src={logo} className="h-10 logo" alt="" />
               </Link>
             </li>
             <li
@@ -88,7 +88,7 @@ const Navbar = () => {
                 About
               </Link>
             </li>
-            <li style={{ marginRight: "-1em" }}>
+            {/* <li style={{ marginRight: "-1em" }}>
               <Link
                 style={{
                   fontWeight: "400",
@@ -101,7 +101,7 @@ const Navbar = () => {
               >
                 FAQs
               </Link>
-            </li>
+            </li> */}
             {/* <li style={{ marginRight: "-1em" }}>
               <Link
                 style={{
