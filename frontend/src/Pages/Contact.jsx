@@ -27,22 +27,18 @@ function Contact() {
               <div className="spin scale-150 mx-auto px-20">
                 <Spinner />
               </div>
-              <div class="w-full h-40 flex items-center justify-center cursor-pointer my-10 sm:my-0">
-<<<<<<< team
-                <div class="relative inline-flex items-center justify-start py-3 pl-4 pr-12 overflow-hidden font-semibold shadow text-indigo-600 transition-all duration-150 ease-in-out rounded hover:pl-10 hover:pr-6 bg-gray-50 bg-gray-900 dark:text-white hover:text-gray-200 dark:shadow-none group">
-=======
-                <div class="relative inline-flex items-center justify-start py-3 pl-4 pr-12 overflow-hidden font-semibold shadow text-indigo-600 transition-all duration-150 ease-in-out rounded hover:pl-10 hover:pr-6  bg-gray-900 dark:text-white dark:hover:text-gray-200 dark:shadow-none group">
->>>>>>> main
+              <div className="w-full h-40 flex items-center justify-center cursor-pointer my-10 sm:my-0">
+                <div className="relative inline-flex items-center justify-start py-3 pl-4 pr-12 overflow-hidden font-semibold shadow text-indigo-600 transition-all duration-150 ease-in-out rounded hover:pl-10 hover:pr-6  bg-gray-900 dark:text-white dark:hover:text-gray-200 dark:shadow-none group">
                   <button type="button" className="">
                     <a href="mailto:curioscapital@gmail.com">
-                      <span class="absolute bottom-0 left-0 w-full h-1 transition-all duration-150 ease-in-out bg-indigo-900 group-hover:h-full"></span>
-                      <span class="absolute right-0 pr-4 duration-200 ease-out group-hover:translate-x-12">
+                      <span className="absolute bottom-0 left-0 w-full h-1 transition-all duration-150 ease-in-out bg-indigo-900 group-hover:h-full"></span>
+                      <span className="absolute right-0 pr-4 duration-200 ease-out group-hover:translate-x-12">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           viewBox="0 0 24 24"
                           stroke="currentColor"
                           fill="none"
-                          class="w-5 h-5 text-white"
+                          className="w-5 h-5 text-white"
                         >
                           <path
                             d="M14 5l7 7m0 0l-7 7m7-7H3"
@@ -52,13 +48,13 @@ function Contact() {
                           ></path>
                         </svg>
                       </span>
-                      <span class="absolute left-0 pl-2.5 -translate-x-12 group-hover:translate-x-0 ease-out duration-200">
+                      <span className="absolute left-0 pl-2.5 -translate-x-12 group-hover:translate-x-0 ease-out duration-200">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           viewBox="0 0 24 24"
                           stroke="currentColor"
                           fill="none"
-                          class="w-5 h-5 text-[#e55db2]"
+                          className="w-5 h-5 text-[#e55db2]"
                         >
                           <path
                             d="M14 5l7 7m0 0l-7 7m7-7H3"
@@ -68,7 +64,7 @@ function Contact() {
                           ></path>
                         </svg>
                       </span>
-                      <span class="relative w-full text-left transition-colors duration-200 ease-in-out group-hover:text-white ">
+                      <span className="relative w-full text-left transition-colors duration-200 ease-in-out group-hover:text-white ">
                         Send a mail
                       </span>
                     </a>
@@ -103,7 +99,7 @@ function Contact() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <span class="[&>svg]:h-7 [&>svg]:w-7">
+                <span className="[&>svg]:h-7 [&>svg]:w-7">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="currentColor"
