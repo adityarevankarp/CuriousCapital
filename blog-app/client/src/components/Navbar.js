@@ -41,7 +41,7 @@ export const Navbar = (props) => {
             <div className="text-sm lg:flex-grow">
                  
               <a href="/" className="block mt-4 text-lg hover:underline lg:inline-block lg:mt-0 text-teal-200 hover:text-white">
-                Read Blogs
+                Write Blogs
               </a>
             </div>
             

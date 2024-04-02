@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import { Button } from '@mui/base';
 import EditDraft from './EditDraft';
 import { Edit } from '@mui/icons-material';
-import Comment from './Comment';
 import { useParams, useNavigate } from 'react-router-dom';
 import { Cancel } from '@mui/icons-material';
 import { Delete } from '@mui/icons-material';
@@ -12,8 +11,6 @@ import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
-import NewComment from './NewComment';
-import AddCommentIcon from '@mui/icons-material/AddComment';
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
 import { HashLoader } from 'react-spinners';
@@ -21,9 +18,7 @@ import { HashLoader } from 'react-spinners';
 const Blog = ({ user }) => {
   const { id } = useParams();
   const navigate = useNavigate();
-  const [commentModal, setCommentModalOpen] = useState(false)
   const [blog, setBlog] = useState([])
-  const [comments, setComments] = useState([])
   const [openDel, setOpenDel] = useState(false)
   const [openEdit, setOpenEdit] = useState(false)
   const [loading, setLoading] = useState(true);
@@ -48,7 +43,6 @@ const Blog = ({ user }) => {
         }
         setBlog(data)
         console.log(data);
-        setComments(data.comments)
         setLoading(false)
       })
     console.log(blog);
@@ -125,23 +119,8 @@ const Blog = ({ user }) => {
 
               </div>
             </div>
-
-          <div className='p-2 flex  justify-center'>
-          <NewComment setComments comments blogId={id} updateInfo={callAPI} />
-          </div>
           </div>
 
-          <div className='flex justify-center'>
-            <div className='font-prata w-full lg:w-[60%] grid-flow-row grid-cols-1 '>
-              {
-
-                comments && comments.map((element, key) => {
-                  return <Comment account={element.account} comment={element.comment} />
-                })
-              }
-
-            </div>
-          </div>
         </div>
       }
 

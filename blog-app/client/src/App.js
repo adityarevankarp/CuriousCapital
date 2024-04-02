@@ -43,8 +43,6 @@ function App() {
     />
      : 
     <div>
-    <Navbar username = {user}/>
-    
     <Router>
       <Routes>
       <Route path="/" element={<Home user={user}/>}/> 
