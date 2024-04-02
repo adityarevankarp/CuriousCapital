@@ -43,7 +43,7 @@ const Navbar = () => {
           } md:flex transition ease-in-out duration-700 transform`}
           id="navbar-default"
         >
-          <ul className="navbar-custom lg:gap-24 md:gap-24 sm:gap-20 sm:justify-start text-white text-xl font-bold flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-transparent md:flex-row md:space-x-0 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-transparent dark:bg-transparent md:dark:bg-transparent ">
+          <ul className="navbar-custom lg:gap-24 md:gap-24 sm:gap-20 sm:justify-start text-white text-xl font-extrabold flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-transparent md:flex-row md:space-x-0 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-transparent dark:bg-transparent md:dark:bg-transparent ">
             <li
               id="logoid"
               style={{ marginRight: "-1em", marginTop: "-0.5em" }}
@@ -65,7 +65,7 @@ const Navbar = () => {
             >
               <Link
                 style={{
-                  fontWeight: "400",
+                  fontWeight: "600",
                   fontSize: "0.9em",
                   filter: "drop-shadow(9px 9px 8px #010101)",
                 }}
@@ -78,7 +78,7 @@ const Navbar = () => {
             <li style={{ marginRight: "-1em" }}>
               <Link
                 style={{
-                  fontWeight: "400",
+                  fontWeight: "600",
                   fontSize: "0.9em",
                   filter: "drop-shadow(9px 9px 8px #010101)",
                 }}
@@ -120,7 +120,7 @@ const Navbar = () => {
             <li style={{ marginRight: "-1em" }}>
               <Link
                 style={{
-                  fontWeight: "400",
+                  fontWeight: "600",
                   fontSize: "0.9em",
                   filter: "drop-shadow(9px 9px 8px #010101)",
                 }}
@@ -133,7 +133,7 @@ const Navbar = () => {
             <li style={{ marginRight: "-1em" }}>
               <Link
                 style={{
-                  fontWeight: "400",
+                  fontWeight: "600",
                   fontSize: "0.9em",
                   filter: "drop-shadow(9px 9px 8px #010101)",
                 }}
@@ -146,7 +146,7 @@ const Navbar = () => {
             <li style={{ marginRight: "-1em" }}>
               <Link
                 style={{
-                  fontWeight: "400",
+                  fontWeight: "600",
                   fontSize: "0.9em",
                   filter: "drop-shadow(9px 9px 14px #010101)",
                 }}
