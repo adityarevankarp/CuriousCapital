@@ -1,11 +1,13 @@
 import React from 'react'
-import Card from './Card'
+import Draft from './Draft'
 import { useEffect, useState } from 'react'
 import { HashLoader } from 'react-spinners'
-const Home = (props) => {
+import { Navbar } from './Navbar'
+const Home = ({user}) => {
   const [blogs, setBlogs] = useState([])
   const [loading, setLoading] = useState(true)
   useEffect(() => {
+    console.log(user);
     const fetchData = async () => {
       try {
         const response = await fetch('/api/blog/all');
@@ -23,19 +25,14 @@ const Home = (props) => {
 
   return (
     <div>
+
+      <Navbar username={user} />
+
       {
         !loading ?
           <div>
-            <h1 className='m-6 text-2xl font-extralight'>Latest Blogs</h1>
-            <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-4 '>
-              {blogs.map((Element, key) => {
-                return <>
-                  <div className='flex justify-center '>
-                    <Card key={key} url={"/blog/" + Element._id} imgUrl={Element.imgUrl} title={Element.title} content={Element.content.slice(0, 200)} author={Element.account ? Element.account.username : ""} date={Element.createdAt} />
-                  </div>
-                </>
-              })}
-            </div>
+            <h1 className='m-6 text-2xl font-extralight'>Upload Blogs</h1>
+              <Draft isAuthenticated={user.isAuth}/>
           </div>
           :
           <HashLoader

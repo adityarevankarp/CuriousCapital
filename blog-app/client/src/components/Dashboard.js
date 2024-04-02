@@ -34,6 +34,7 @@ const Dashboard = ({currUser}) => {
 
   return (
     <div className="bg-white  p-6 rounded shadow-md">
+    
        <DotLoader color="#36d7b7" loading={loading} width={'100%'} className='absolute ml-[50%] mt-48'/>
        {!loading &&  
       <div>

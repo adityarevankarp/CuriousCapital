@@ -14,13 +14,13 @@ function ImageUploader({ image, setImage }) {
   };
   React.useEffect(() => {
     if(image.length==0)
-    setImage("https://raw.githubusercontent.com/ManishMadan2882/blog-app/main/src/assets/defaultimg.png")
+    setImage("https://res.cloudinary.com/dy4n5em1q/image/upload/v1711747225/defaultimg_grgr0j.png")
   }, [image])
   return (
-    <div className='px-6 '>
+    <div className=' '>
     <label className='block'>Upload Cover image</label>
       <input
-        className='cursor-pointer bg-blue-500 shadow-lg p-2 text-white'
+        className='cursor-pointer bg-blue-500 shadow-lg rounded-lg p-2 text-white'
         type="file"
         accept="image/*"
         onChange={handleImageChange}
@@ -28,7 +28,7 @@ function ImageUploader({ image, setImage }) {
       {image && (
         <div>
           <h2>Preview</h2>
-          <div className='flex justify-center border p-2 rounded-2xl'>
+          <div className='flex p-2 justify-center border rounded-2xl'>
             <img className='h-48 rounded-md shadow-md' src={image} alt="Uploaded" style={{ maxWidth: '100%' }} />
           </div>
         </div>
