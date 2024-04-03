@@ -4,27 +4,27 @@ import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 import "./Css/Blogs.css";
 import { Link } from "react-router-dom";
+import { useState,useEffect } from "react";
 function Blogs() {
-  const blogs = [
-    {
-      date: "12 Jun 2019",
-      title: "Bitters hashtag waistcoat fashion axe chia unicorn",
-      link: "/about",
-    },
-    {
-      date: "13 Dec 2023",
-      title:
-        "Announcing Framework Tent: A Token-Gated Knowledge Base for the Framework Platform",
-      link: "/about",
-    },
-    {
-      date: "2 Feb 2022",
-      title:
-        "Balance sheet as a business model; a framework for understanding synthetic asset platforms",
-      link: "/about",
-    },
-    // Add more blog objects as needed
-  ];
+  const [blogs, setBlogs] = useState([])
+  const [loading, setLoading] = useState(true)
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch('http://localhost:5400/api/blog/author/TEST');
+        const jsonData = await response.json();
+        console.log(jsonData[0].account.username)
+        setBlogs(jsonData);
+        setLoading(false);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+
   return (
     <div>
       <div className="overflow-x-hidden">
@@ -51,7 +51,7 @@ function Blogs() {
                     <div className="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
                       <span className="font-semibold title-font text-white"></span>
                       <span className="mt-1 text-white text-sm">
-                        {blog.date}
+                        {blog.createdAt}
                       </span>
                     </div>
                     <div className="md:flex-grow">
@@ -59,10 +59,10 @@ function Blogs() {
                         {blog.title}
                       </h2>
                       <Link
-                        to={blog.link}
+                        to={`/blog/${blog._id}`}
                         className="text-red-400 inline-flex items-center mt-4"
                       >
-                        Learn More
+                        ...Learn More
                         {/* <svg
                           className="w-4 h-4 ml-2"
                           viewBox="0 0 24 24"
