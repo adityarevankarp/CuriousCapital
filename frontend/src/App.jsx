@@ -5,6 +5,7 @@ import LandingPage from "./Pages/LandingPage";
 import AboutPage from "./Pages/AboutPage";
 import Portfolio from "./Pages/Portfolio";
 import Blogs from "./Pages/Blogs";
+import Blog from "./Pages/Blog.jsx";
 import Contact from "./Pages/Contact";
 // import Navbar from "./Components/Navbar";
 import { BackgroundProvider } from "./BackgroundContext.jsx";
@@ -22,6 +23,7 @@ function App() {
               <Route path="/about" element={<AboutPage />} />
               <Route path="/portfolio" element={<Portfolio />} />
               <Route path="/blogs" element={<Blogs />} />
+              <Route path="blog/:id" element={<Blog/>} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/faqs" element={<FaqPage />} />
             </Routes>
