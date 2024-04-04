@@ -87,7 +87,7 @@ const EditDraft = (props) => {
         {(mode === 'edit') ?
           <ReactQuill className='my-10 h-96' defaultValue={content} modules={modules} onChange={setContent} theme="snow" placeholder="Content goes here..." />
           :
-          <div id='blogContent' className='shadow-lg overflow-hidden border h-max font-lora p-4 pb-28 lg:pb-14 leading-loose box-shadow-lg w-full lg:w-[60%] bg-white text-justify resize-none '>
+          <div id='blogContent' className='shadow-lg overflow-hidden border h-max font-lora p-4 pb-28 lg:pb-14 leading-loose box-shadow-lg w-full bg-white text-justify resize-none mt-10'>
 
             <ReactMarkdown children={content} rehypePlugins={[rehypeRaw]} />
 

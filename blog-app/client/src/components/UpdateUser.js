@@ -14,7 +14,6 @@ const UpdateUser = ({data,close,postUpdation}) => {
             name : e.target.value
         }
       )
-      console.log(user);
     }
     const handleBioChange = (e)=>{
         setUser(
@@ -23,7 +22,6 @@ const UpdateUser = ({data,close,postUpdation}) => {
               bio : e.target.value
           }
         )
-        console.log(user);
       }
       const handleLocationChange = (e)=>{
         setUser(
@@ -32,7 +30,6 @@ const UpdateUser = ({data,close,postUpdation}) => {
               location : e.target.value
           }
         )
-        console.log(user);
       }
       const handleEmailChange = (e)=>{
         setUser(
@@ -41,7 +38,6 @@ const UpdateUser = ({data,close,postUpdation}) => {
               email : e.target.value
           }
         )
-        console.log(user);
       }
    const submit =  ()=>{
     setLoading(true);
@@ -54,7 +50,6 @@ const UpdateUser = ({data,close,postUpdation}) => {
     })
     .then((res) => res.json())
     .then(output => {
-        console.log(output.msg);
         if(output.msg = 'edited')
         {
             postUpdation(user);

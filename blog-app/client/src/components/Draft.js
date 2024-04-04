@@ -40,7 +40,7 @@ const Draft = ({ isAuthenticated }) => {
   const [title, setTitle] = useState(localStorage.getItem('title') || '')
   const [image, setImage] = useState([]);
   const [content, setContent] = useState(localStorage.getItem('content') || '')
-  const [mode, setMode] = useState('edit')
+  const [mode, setMode] = useState('edit');
   useEffect(()=>{
     localStorage.setItem('title',title)
   },[title])
@@ -97,8 +97,10 @@ const Draft = ({ isAuthenticated }) => {
           <ReactQuill className='my-10 h-96' defaultValue={content} modules={modules} onChange={setContent} theme="snow" placeholder="Content goes here..." />
 
           :
-          <div id='blogContent' className='shadow-lg mt-10 flex justify-center overflow-hidden border h-max font-lora p-4 pb-28 lg:pb-14 leading-loose box-shadow-lg w-full bg-white text-justify resize-none '>
+          <div id='blogContent' className='shadow-lg mt-10 flex  overflow-hidden border h-max font-lora p-4 pb-28 lg:pb-14 leading-loose box-shadow-lg w-full bg-white text-justify resize-none '>
+            <div>
             <ReactMarkdown children={content} rehypePlugins={[rehypeRaw]} />
+            </div>
           </div>
         }
       </div>

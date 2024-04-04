@@ -8,7 +8,7 @@ import { AccountBox } from '@mui/icons-material';
 import logo from '../assets/logo.png'
 Modal.setAppElement('#root'); // set the app root element to handle screen readers
 export const Navbar = (props) => {
-    const [open,isOpen] = useState(false)
+    const [open,isOpen] = useState(false);
     const [menu,setMenu] = useState('hidden')
     const toggleMenu = () =>{
      menu === 'hidden'
@@ -30,7 +30,7 @@ export const Navbar = (props) => {
          <nav className="flex w-full items-center justify-between flex-wrap bg-gradient-to-r from-cyan-600 to-cyan-800 p-6">
           <div className="flex items-center flex-shrink-0 text-white mr-6">
             <a href='/'><img src={logo} className='w-8 rounded-2xl mx-2 shadow-lg'/></a>
-            <span className="font-semibold text-xl tracking-tight">Blog-app</span>
+            <span className="font-semibold text-xl tracking-tight">Curious CMS</span>
           </div>
           <div class="block lg:hidden">
             <button onClick={toggleMenu} className="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white">
@@ -46,7 +46,7 @@ export const Navbar = (props) => {
             </div>
             
             <div>
-            <Button class="mr-5 inline-block text-sm px-4 py-2 leading-none border rounded text-white border-gray-200 hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0" onClick={props.username==='*'? ()=> window.location.replace('/login'): openModal}>Create Post +</Button>
+            {/* <Button class="mr-5 inline-block text-sm px-4 py-2 leading-none border rounded text-white border-gray-200 hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0" onClick={props.username==='*'? ()=> window.location.replace('/login'): openModal}>Create Post +</Button> */}
               {
                
                 (props.username !== '*') ?

@@ -7,12 +7,10 @@ const Home = ({user}) => {
   const [blogs, setBlogs] = useState([])
   const [loading, setLoading] = useState(true)
   useEffect(() => {
-    console.log(user);
     const fetchData = async () => {
       try {
         const response = await fetch('/api/blog/all');
         const jsonData = await response.json();
-        console.log(jsonData[0].account.username)
         setBlogs(jsonData);
         setLoading(false);
       } catch (error) {
@@ -26,13 +24,12 @@ const Home = ({user}) => {
   return (
     <div>
 
-      <Navbar username={user} />
 
       {
         !loading ?
           <div>
             <h1 className='m-6 text-2xl font-extralight'>Upload Blogs</h1>
-              <Draft isAuthenticated={user.isAuth}/>
+              <Draft isAuthenticated={user !== "*"}/>
           </div>
           :
           <HashLoader

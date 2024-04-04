@@ -7,7 +7,7 @@ import rehypeRaw from "rehype-raw";
 const Card = ({ author, url, imgUrl, title, content, date }) => {
   return (
     <div className='relative'>
-      <a href={`/profile/${author}`} className="bg-indigo-100 inline absolute left-6 text-indigo-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-purple-900 dark:text-purple-300">
+      <a href={`/profile/${author}`} className="bg-indigo-100 inline absolute left-6 text-indigo-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded">
         <AccountBoxIcon />
         {author}
       </a>
@@ -27,7 +27,7 @@ const Card = ({ author, url, imgUrl, title, content, date }) => {
               ...read more
             </div>
           </div>
-          <span className="absolute bottom-1 right-2 bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">
+          <span className="absolute bottom-1 right-2 bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded">
             {moment(date).fromNow()}
           </span>
         </Link>
