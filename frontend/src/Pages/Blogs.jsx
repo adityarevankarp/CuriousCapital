@@ -5,15 +5,17 @@ import Footer from "../Components/Footer";
 import "./Css/Blogs.css";
 import { Link } from "react-router-dom";
 import { useState,useEffect } from "react";
+import moment from 'moment'
+const cmsHost = import.meta.env.VITE_CMS_DOMAIN;
+const cmsUsername = import.meta.env.VITE_CMS_USERNAME || 'TEST';
 function Blogs() {
   const [blogs, setBlogs] = useState([])
   const [loading, setLoading] = useState(true)
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('http://localhost:5400/api/blog/author/TEST');
+        const response = await fetch(`${cmsHost}/api/blog/author/${cmsUsername}`);
         const jsonData = await response.json();
-        console.log(jsonData[0].account.username)
         setBlogs(jsonData);
         setLoading(false);
       } catch (error) {
@@ -49,9 +51,8 @@ function Blogs() {
                     className="py-8 flex flex-wrap md:flex-nowrap"
                   >
                     <div className="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
-                      <span className="font-semibold title-font text-white"></span>
                       <span className="mt-1 text-white text-sm">
-                        {blog.createdAt}
+                        {moment(blog.createdAt).format('DD MMM, YY')}
                       </span>
                     </div>
                     <div className="md:flex-grow">

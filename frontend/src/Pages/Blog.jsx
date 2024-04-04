@@ -6,20 +6,20 @@ import { HashLoader } from 'react-spinners';
 import Footer from '../Components/Footer';
 import Hero from '../Components/Hero';
 import Navbar from '../Components/Navbar';
+const cmsHost = import.meta.env.VITE_CMS_DOMAIN || 'http://localhost:5400';
 const Blog = () => {
     const { id } = useParams();
     const [blog, setBlog] = useState([])
     const [loading, setLoading] = useState(true);
     const callAPI = () => // loads the blog contents
     {
-        fetch(`http://localhost:5400/api/blog/${id}`)
+        fetch(`${cmsHost}/api/blog/${id}`)
             .then(res => res.json())
             .then(data => {
                 if (data.msg === 'not found') {
                     window.location.replace('/pagenotfound')
                 }
                 setBlog(data)
-                console.log(data);
                 setLoading(false)
             })
     }

@@ -7,7 +7,7 @@ const cloudinary = require('cloudinary').v2;
 const storage = multer.memoryStorage();
 const upload = multer({ storage: storage });
 
-const {getBlogById,getAllBlogs} = require('../controllers/Posts/getPost');
+const {getBlogById,getAllBlogs, getBlogsByAuthor} = require('../controllers/Posts/getPost');
 const {deleteById} = require('../controllers/Posts/deletePost')
 const {updateById} = require('../controllers/Posts/updatePost')
 const { createPost } = require('../controllers/Posts/createPost');
@@ -15,6 +15,7 @@ const { createPost } = require('../controllers/Posts/createPost');
 route.get('/all',getAllBlogs) //all blogs route
 route.post('/create',upload.single('file'),createPost)
 route.get('/:id',getBlogById)//read by id
+route.get('/author/:username',getBlogsByAuthor)
 route.put('/update/:id',upload.single('file'),updateById) 
 route.delete('/:id',deleteById) 
 

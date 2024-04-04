@@ -13,12 +13,11 @@ import Dashboard from './components/Dashboard';
 
 function App() {
   const [loading,setLoading] = useState(true);
-   const [user,setUser] = useState('*');
+   const [user,setUser] = useState('*'); //not registered default to *
    useEffect(()=>{
     fetch('/api/ping')
     .then((res)=>res.json())
     .then((data)=>{
-        console.log(data);
         if(data.isAuth)
         {
           setUser(data.userData.username)
@@ -43,6 +42,8 @@ function App() {
     />
      : 
     <div>
+
+    <Navbar username={user} />
     <Router>
       <Routes>
       <Route path="/" element={<Home user={user}/>}/> 

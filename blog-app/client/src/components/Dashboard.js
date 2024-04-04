@@ -83,6 +83,7 @@ const Dashboard = ({currUser}) => {
                  title={Element.title}
                  content={Element.content.slice(0,100)}
                  imgUrl={Element.imgUrl}
+                 date={Element.createdAt}
                  url={"/blog/"+Element._id} 
                />
                 })

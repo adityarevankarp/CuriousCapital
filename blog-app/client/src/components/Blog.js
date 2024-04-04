@@ -42,10 +42,8 @@ const Blog = ({ user }) => {
           window.location.replace('/pagenotfound')
         }
         setBlog(data)
-        console.log(data);
         setLoading(false)
       })
-    console.log(blog);
   }
   useEffect(() => {
     callAPI()
@@ -67,8 +65,8 @@ const Blog = ({ user }) => {
             (blog.account.username === user) && <div className='float-right p-2 ' >
               <Button className='m-2'><Edit color='primary' onClick={() => setOpenEdit(true)} /></Button>
               <Modal isOpen={openEdit}>
-                <div >
-                  <button onClick={() => setOpenEdit(false)} className='float-right' >{<Cancel />}</button>
+                <div className='relative'>
+                  <button onClick={() => setOpenEdit(false)} className='fixed top-2 right-2' >{<Cancel />}</button>
                 </div>
                 <EditDraft title={blog.title} content={blog.content} imgUrl={blog.imgUrl} id={id} />
               </Modal>

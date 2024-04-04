@@ -38,7 +38,7 @@ function checkImageFormat(input) {
 }
 const EditDraft = (props) => {
   const [title, setTitle] = useState(props.title)
-  const [image, setImage] = useState(props.imgUrl);
+  const [image, setImage] = useState(props.imgUrl || 'https://res.cloudinary.com/dy4n5em1q/image/upload/v1711747225/defaultimg_grgr0j.png');
   const [content, setContent] = useState(props.content)
   const [mode, setMode] = useState('edit')
   const modeChange = (e) => {
@@ -87,7 +87,7 @@ const EditDraft = (props) => {
         {(mode === 'edit') ?
           <ReactQuill className='my-10 h-96' defaultValue={content} modules={modules} onChange={setContent} theme="snow" placeholder="Content goes here..." />
           :
-          <div id='blogContent' className='shadow-lg overflow-hidden border h-max font-lora p-4 pb-28 lg:pb-14 leading-loose box-shadow-lg w-full lg:w-[60%] bg-white text-justify resize-none '>
+          <div id='blogContent' className='shadow-lg overflow-hidden border h-max font-lora p-4 pb-28 lg:pb-14 leading-loose box-shadow-lg w-full bg-white text-justify resize-none mt-10'>
 
             <ReactMarkdown children={content} rehypePlugins={[rehypeRaw]} />
 
