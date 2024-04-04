@@ -20,7 +20,6 @@ const Blog = () => {
                     window.location.replace('/pagenotfound')
                 }
                 setBlog(data)
-                console.log(data);
                 setLoading(false)
             })
     }
