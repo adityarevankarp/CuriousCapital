@@ -5,13 +5,15 @@ import Footer from "../Components/Footer";
 import "./Css/Blogs.css";
 import { Link } from "react-router-dom";
 import { useState,useEffect } from "react";
+const cmsHost = import.meta.env.CMS_DOMAIN || 'http://localhost:5400';
+const cmsUsername = import.meta.env.CMS_USERNAME || 'TEST';
 function Blogs() {
   const [blogs, setBlogs] = useState([])
   const [loading, setLoading] = useState(true)
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('http://localhost:5400/api/blog/author/TEST');
+        const response = await fetch(`${cmsHost}/api/blog/author/${cmsUsername}`);
         const jsonData = await response.json();
         console.log(jsonData[0].account.username)
         setBlogs(jsonData);
