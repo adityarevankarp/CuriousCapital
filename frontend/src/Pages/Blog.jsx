@@ -6,7 +6,7 @@ import { HashLoader } from 'react-spinners';
 import Footer from '../Components/Footer';
 import Hero from '../Components/Hero';
 import Navbar from '../Components/Navbar';
-const cmsHost = import.meta.env.CMS_DOMAIN || 'http://localhost:5400';
+const cmsHost = import.meta.env.VITE_CMS_DOMAIN || 'http://localhost:5400';
 const Blog = () => {
     const { id } = useParams();
     const [blog, setBlog] = useState([])

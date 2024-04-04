@@ -5,8 +5,8 @@ import Footer from "../Components/Footer";
 import "./Css/Blogs.css";
 import { Link } from "react-router-dom";
 import { useState,useEffect } from "react";
-const cmsHost = import.meta.env.CMS_DOMAIN || 'http://localhost:5400';
-const cmsUsername = import.meta.env.CMS_USERNAME || 'TEST';
+const cmsHost = import.meta.env.VITE_CMS_DOMAIN;
+const cmsUsername = import.meta.env.VITE_CMS_USERNAME || 'TEST';
 function Blogs() {
   const [blogs, setBlogs] = useState([])
   const [loading, setLoading] = useState(true)
