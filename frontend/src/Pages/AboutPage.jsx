@@ -7,10 +7,8 @@ function AboutPage() {
   return (
     <>
       <div className="overflow-x-hidden">
-
         <Hero />
-        
-        
+
         <div className="h-auto w-auto z-1 relative">
           <Navbar />
         </div>
@@ -50,14 +48,13 @@ function AboutPage() {
               position our clients for success in this dynamic financial
               landscape.
             </p>
-            <div className='relative z-1 flex gap-5 rounded-full'>
+            {/* <div className='relative z-1 flex gap-5 rounded-full'>
+          <Avatar />
           <Avatar/>
           <Avatar/>
-          <Avatar/>
-        </div>
+        </div> */}
           </div>
         </div>
-        
 
         <div className="relative z-1 flex flex-col justify-end items-center w-screen h-screen">
           <Footer />

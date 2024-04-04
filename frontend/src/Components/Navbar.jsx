@@ -11,7 +11,7 @@ const Navbar = () => {
 
   return (
     <nav style={{ backgroundColor: "rgba(0,0,0,0.15)" }} className="navi">
-      <div className="max-w-screen-xl lg:mx-auto p-8 custom-nav">
+      <div className="max-w-screen-xl lg:mx-auto p-7 custom-nav">
         <button
           onClick={toggleMobileMenu}
           data-collapse-toggle="navbar-default"
