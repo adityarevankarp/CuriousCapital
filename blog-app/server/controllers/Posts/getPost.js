@@ -18,9 +18,22 @@ const getBlogById = async(req,res)=>{
     const data = await blogs.find().populate('account','username')
     res.status(200).json(data)
 };
+const getBlogsByAuthor = async(req,res)=>{
+  try{
+   const blog = await blogs.find({author:req.params.username});
+   if(blog == null)
+   throw new Error('not found')
+   
+   res.status(200).json(blog)
+   
+   } 
+   catch(err){
+     return res.status(404).json({msg:err})  
+   } 
+ }
 
 
 
-module.exports = {getBlogById,getAllBlogs}
+module.exports = {getBlogById,getAllBlogs,getBlogsByAuthor}
 
 

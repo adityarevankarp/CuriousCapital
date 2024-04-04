@@ -3,7 +3,9 @@ const api = require('./routes/api')
 const express = require('express')
 const path = require('path')
 const port = 5400
+const cors = require('cors');
 const app  =  express()
+app.use(cors({origin:"*"}))
 app.use(express.static(path.join(__dirname,"..","client","build")));
 app.use('/api',api) /*All the Routes are declared */
 /*Statically Hosting the frontend */
