@@ -38,7 +38,7 @@ function checkImageFormat(input) {
 }
 const EditDraft = (props) => {
   const [title, setTitle] = useState(props.title)
-  const [image, setImage] = useState(props.imgUrl);
+  const [image, setImage] = useState(props.imgUrl || 'https://res.cloudinary.com/dy4n5em1q/image/upload/v1711747225/defaultimg_grgr0j.png');
   const [content, setContent] = useState(props.content)
   const [mode, setMode] = useState('edit')
   const modeChange = (e) => {
