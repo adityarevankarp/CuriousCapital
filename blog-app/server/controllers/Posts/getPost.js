@@ -20,15 +20,18 @@ const getBlogById = async(req,res)=>{
 };
 const getBlogsByAuthor = async(req,res)=>{
   try{
-   const blog = await blogs.find({author:req.params.username});
+    const accountInfo = await user.findOne({
+      username : req.params.username
+    });
+   const blog = await blogs.find({account:accountInfo._id});
    if(blog == null)
-   throw new Error('not found')
+   throw new Error('not found');
    
-   res.status(200).json(blog)
+   res.status(200).json(blog);
    
    } 
    catch(err){
-     return res.status(404).json({msg:err})  
+     return res.status(404).json({msg:err}) ; 
    } 
  }
 
