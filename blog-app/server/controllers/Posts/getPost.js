@@ -23,7 +23,7 @@ const getBlogsByAuthor = async(req,res)=>{
     const accountInfo = await user.findOne({
       username : req.params.username
     });
-   const blog = await blogs.find({account:accountInfo._id});
+   const blog = await blogs.find({account:accountInfo._id}).sort({createdAt : -1});
    if(blog == null)
    throw new Error('not found');
    
