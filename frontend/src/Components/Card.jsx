@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import "./Card.css";
 
 function Modal({ isOpen, onClose, text ,logo_link}) {
   const handleCloseModal = (event) => {

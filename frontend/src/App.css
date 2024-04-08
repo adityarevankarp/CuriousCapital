@@ -1,32 +1,32 @@
-/* CustomScrollbar.css */
 
-/* Track */
+
+
 ::-webkit-scrollbar {
-  width: 12px; /* Set the width of the scrollbar */
+  width: 12px; 
 }
 
-/* Handle */
+
 ::-webkit-scrollbar-thumb {
-  background-color: #9b4479; /* Set the color of the scrollbar handle */
-  border-radius: 8px; /* Set the border radius of the handle */
+  background-color: #9b4479;
+  border-radius: 8px; 
 }
 
-/* Handle on hover */
+
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #e55db2; /* Change color on hover */
+  background-color: #e55db2; 
 }
 
-/* Track on hover */
+
 ::-webkit-scrollbar-track:hover {
-  background-color: #5a3698; /* Change color on track hover */
+  background-color: #5a3698; 
 }
 ::-webkit-scrollbar-track {
-  background-color: #23153c; /* Change color on track hover */
+  background-color: #23153c;
 }
 
 /* Button */
 ::-webkit-scrollbar-button {
-  display: none; /* Hide the scrollbar buttons (if any) */
+  display: none; 
 }
 * {
   font-family: "Inter", medium;
@@ -63,11 +63,9 @@
 }
 .faq-bg {
   background: rgba(31, 31, 31, 0.076) !important;
-  /* box-shadow: 0 2px 12px 0 rgba(31, 38, 135, 0.37); */
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(3px);
   border-radius: 4px;
-  /* border: 2px solid rgba(255, 255, 255, 0.157); */
 }
 svg {
   color: #fff;

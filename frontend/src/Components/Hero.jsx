@@ -15,7 +15,7 @@ const Hero = () => {
         minWidth: 200.0,
         scale: 1.0,
         scaleMobile: 0.4,
-        points: 8.0,
+        points: 7.0,
       });
     }
 

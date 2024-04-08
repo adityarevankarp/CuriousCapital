@@ -20,21 +20,7 @@ const Navbar = () => {
           aria-controls="navbar-default"
           aria-expanded={isMobileMenuOpen}
         >
-          {/* <span className="sr-only">Open main menu</span> */}
-          {/* <svg
-            className="md:w-5 md:h-5 "
-            aria-hidden="true"
-            fill="none"
-            viewBox="0 0 17 14"
-          >
-            <path
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M1 1h15M1 7h15M1 13h15"
-            />
-          </svg> */}
+          
           <img src={logo} className="h-8 w-20" alt="" />
         </button>
         <div
@@ -102,21 +88,6 @@ const Navbar = () => {
                 FAQs
               </Link>
             </li> */}
-            {/* <li style={{ marginRight: "-1em" }}>
-              <Link
-                style={{
-                  fontWeight: "400",
-                  fontSize: "1em",
-                  filter: "drop-shadow(9px 9px 8px #010101)",
-                }}
-                to="/faqs"
-                className="block py-2 px-3  rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-pink-200 dark:hover:bg-transparent"
-                aria-current="page"
-              >
-                Services
-              </Link>
-            </li> */}
-
             <li style={{ marginRight: "-1em" }}>
               <Link
                 style={{
