@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import moment from "moment";
 const cmsHost = import.meta.env.VITE_CMS_DOMAIN;
-const cmsUsername = import.meta.env.VITE_CMS_USERNAME || "TEST";
+const cmsUsername = import.meta.env.VITE_CMS_USERNAME || "ADMIN";
 function Blogs() {
   const [blogs, setBlogs] = useState([]);
   const [loading, setLoading] = useState(true);
