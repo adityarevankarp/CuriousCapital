@@ -112,14 +112,12 @@ function Portfolio() {
             >
               Portfolio
             </p>
+          
             <p
-              className="text-xl text-white my-8 font-normal text-justify"
+              className="text-xl text-white  font-normal text-justify"
               style={{ fontFamily: "Inter" }}
             >
-              CURIOUS CAPITAL invests in generational crypto startups who lay
-              the foundation for our growing ecosystem. Our operational
-              excellence allows great founders to build and their protocols to
-              thrive.
+              Discover the strategic mix of assets driving performance at Curious Capital.
             </p>
             <div className="relative z-1 flex flex-col justify-center items-center p-4 sm:p-8 sm:pt-5">
               <p
@@ -203,12 +201,7 @@ function Portfolio() {
                 modalText={modalTextArr.fetchai}
                 logo_link={modalLinks.fetchai}
               />
-              <Card
-                logo_url={p10}
-                logo_name={"Seeded Network"}
-                modalText={modalTextArr.seededNetwork}
-                logo_link={modalLinks.seededNetwork}
-              />
+              
               <Card
                 logo_url={p2}
                 logo_name={"InvestaX"}

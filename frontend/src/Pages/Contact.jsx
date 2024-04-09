@@ -30,7 +30,7 @@ function Contact() {
               <div className="w-full h-40 flex items-center justify-center cursor-pointer my-10 sm:my-0">
                 <div className="relative inline-flex items-center justify-start py-3 pl-4 pr-12 overflow-hidden font-semibold shadow text-indigo-600 transition-all duration-150 ease-in-out rounded hover:pl-10 hover:pr-6  bg-gray-900 dark:text-white dark:hover:text-gray-200 dark:shadow-none group">
                   <button type="button" className="">
-                    <a href="mailto:curioscapital@gmail.com">
+                    <a href="mailto:contact@curiouscapital.in">
                       <span className="absolute bottom-0 left-0 w-full h-1 transition-all duration-150 ease-in-out bg-indigo-900 group-hover:h-full"></span>
                       <span className="absolute right-0 pr-4 duration-200 ease-out group-hover:translate-x-12">
                         <svg

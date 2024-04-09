@@ -29,48 +29,41 @@ const Blog = () => {
   }, []);
   return (
     <div>
-      <Hero />
-      <div className="h-auto z-1 relative">
-        <Navbar />
-      </div>
-      {/* <HashLoader
-                className='absolute mt-[50%] md:mt-[150px] mx-auto align-middle '
-                color='#36d7b7'
-                loading={loading}
-                size={150}
-                aria-label="Loading Spinner"
-                data-testid="loader"
-            /> */}
-
-            {!loading &&
-                <div className='relative text-white flex justify-center'>
-
-                    <div className='w-full lg:w-[60%] m-2 backdrop-blur-md'>
-                        <h1 className='text-3xl p-3 text-center border-b-2 py-6'>
-                            {blog.title}
-                        </h1>
-                        {blog.imgUrl && <div className='flex justify-center'>
-                            <img alt="Image" className='py-6 drop-shadow-xl' src={blog.imgUrl} />
-                        </div>}
-                        <div className='flex justify-center w-full'>
-                            <div style={{ fontFamily: "Bebas Neue" }}  className='shadow-lg overflow-hidden h-max font-lora p-4 pb-28 lg:pb-14 leading-loose box-shadow-lg bg-transparent text-justify resize-none '>
-                                <div id='blog' dangerouslySetInnerHTML={{__html: blog.content}}></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            }
-            <div className="relative z-1 flex flex-col justify-end items-center m-4">
-                <Footer />
-
+    <Hero />
+    <div className="h-auto z-1 relative">
+      <Navbar />
+    </div>
+    <HashLoader
+      className="absolute mt-[50%] md:mt-[150px] mx-auto align-middle "
+      color="#36d7b7"
+      loading={loading}
+      size={150}
+      aria-label="Loading Spinner"
+      data-testid="loader"
+    />
+    {!loading && (
+      <div className="relative text-white flex justify-center">
+        <div className="w-full lg:w-[60%] m-2 backdrop-blur-md">
+          <h1 className="text-3xl p-3 text-center border-b-2 py-6">
+            {blog.title}
+          </h1>
+          {blog.imgUrl && (
+            <div className="flex justify-center">
+              <img alt="Image" className="py-6 drop-shadow-xl" src={blog.imgUrl} />
+            </div>
+          )}
+          <div className="flex justify-center w-full">
+            <div style={{ fontFamily: "Bebas Neue" }} className="shadow-lg overflow-hidden h-max font-lora p-4 pb-28 lg:pb-14 leading-loose box-shadow-lg bg-transparent text-justify resize-none ">
+              <div id="blog" dangerouslySetInnerHTML={{ __html: blog.content }}></div>
             </div>
           </div>
         </div>
-      )}
-      <div className="relative z-1 flex flex-col justify-end items-center m-4">
-        <Footer />
       </div>
+    )}
+    <div className="relative z-1 flex flex-col justify-end items-center m-4">
+      <Footer />
     </div>
+  </div>
   );
 };
 export default Blog;
