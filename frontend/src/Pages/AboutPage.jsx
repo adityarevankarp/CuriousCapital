@@ -18,7 +18,7 @@ function AboutPage() {
               className="text-[#e55db2] text-3xl font-bold"
               style={{ fontFamily: "Bebas Neue" }}
             >
-              What is CC ?{" "}
+              What is Curious Capital ?{" "}
             </p>
             <p
               className="text-xl text-white my-5 font-normal"
@@ -36,7 +36,7 @@ function AboutPage() {
               className="text-[#e55db2] text-3xl font-bold"
               style={{ fontFamily: "Bebas Neue" }}
             >
-              What’s unique about CC ?{" "}
+              What’s unique about Curious Capital ?{" "}
             </p>
             <p className="text-xl text-white my-5 font-normal">
               By strategically allocating a significant portion of our
