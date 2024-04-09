@@ -1,38 +1,39 @@
-import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom';
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
-import { HashLoader } from 'react-spinners';
-import Footer from '../Components/Footer';
-import Hero from '../Components/Hero';
-import Navbar from '../Components/Navbar';
-const cmsHost = import.meta.env.VITE_CMS_DOMAIN || 'http://localhost:5400';
+import { HashLoader } from "react-spinners";
+import Footer from "../Components/Footer";
+import Hero from "../Components/Hero";
+import Navbar from "../Components/Navbar";
+const cmsHost = import.meta.env.VITE_CMS_DOMAIN || "http://localhost:5400";
 const Blog = () => {
-    const { id } = useParams();
-    const [blog, setBlog] = useState([])
-    const [loading, setLoading] = useState(true);
-    const callAPI = () => // loads the blog contents
+  const { id } = useParams();
+  const [blog, setBlog] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const callAPI = () =>
+    // loads the blog contents
     {
-        fetch(`${cmsHost}/api/blog/${id}`)
-            .then(res => res.json())
-            .then(data => {
-                if (data.msg === 'not found') {
-                    window.location.replace('/pagenotfound')
-                }
-                setBlog(data)
-                setLoading(false)
-            })
-    }
-    useEffect(() => {
-        callAPI()
-    }, [])
-    return (
-        <div>
-            <Hero />
-            <div className="h-auto z-1 relative">
-                <Navbar />
-            </div>
-            {/* <HashLoader
+      fetch(`${cmsHost}/api/blog/${id}`)
+        .then((res) => res.json())
+        .then((data) => {
+          if (data.msg === "not found") {
+            window.location.replace("/pagenotfound");
+          }
+          setBlog(data);
+          setLoading(false);
+        });
+    };
+  useEffect(() => {
+    callAPI();
+  }, []);
+  return (
+    <div>
+      <Hero />
+      <div className="h-auto z-1 relative">
+        <Navbar />
+      </div>
+      {/* <HashLoader
                 className='absolute mt-[50%] md:mt-[150px] mx-auto align-middle '
                 color='#36d7b7'
                 loading={loading}
@@ -40,6 +41,7 @@ const Blog = () => {
                 aria-label="Loading Spinner"
                 data-testid="loader"
             /> */}
+
             {!loading &&
                 <div className='relative text-white flex justify-center'>
 
@@ -60,8 +62,15 @@ const Blog = () => {
             }
             <div className="relative z-1 flex flex-col justify-end items-center m-4">
                 <Footer />
+
             </div>
+          </div>
         </div>
-    )
-}
-export default Blog
+      )}
+      <div className="relative z-1 flex flex-col justify-end items-center m-4">
+        <Footer />
+      </div>
+    </div>
+  );
+};
+export default Blog;

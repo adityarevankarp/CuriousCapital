@@ -11,7 +11,7 @@ const Navbar = () => {
 
   return (
     <nav style={{ backgroundColor: "rgba(0,0,0,0.15)" }} className="navi">
-      <div className="max-w-screen-xl lg:mx-auto p-8 custom-nav">
+      <div className="max-w-screen-xl lg:mx-auto p-7 custom-nav">
         <button
           onClick={toggleMobileMenu}
           data-collapse-toggle="navbar-default"
@@ -20,21 +20,7 @@ const Navbar = () => {
           aria-controls="navbar-default"
           aria-expanded={isMobileMenuOpen}
         >
-          {/* <span className="sr-only">Open main menu</span> */}
-          {/* <svg
-            className="md:w-5 md:h-5 "
-            aria-hidden="true"
-            fill="none"
-            viewBox="0 0 17 14"
-          >
-            <path
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M1 1h15M1 7h15M1 13h15"
-            />
-          </svg> */}
+          
           <img src={logo} className="h-8 w-20" alt="" />
         </button>
         <div
@@ -43,7 +29,7 @@ const Navbar = () => {
           } md:flex transition ease-in-out duration-700 transform`}
           id="navbar-default"
         >
-          <ul className="navbar-custom lg:gap-24 md:gap-24 sm:gap-20 sm:justify-start text-white text-xl font-bold flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-transparent md:flex-row md:space-x-0 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-transparent dark:bg-transparent md:dark:bg-transparent ">
+          <ul className="navbar-custom lg:gap-24 md:gap-24 sm:gap-20 sm:justify-start text-white text-xl font-extrabold flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-transparent md:flex-row md:space-x-0 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-transparent dark:bg-transparent md:dark:bg-transparent ">
             <li
               id="logoid"
               style={{ marginRight: "-1em", marginTop: "-0.5em" }}
@@ -52,10 +38,10 @@ const Navbar = () => {
                 to="/"
                 className="flex items-center space-x-3 rtl:space-x-reverse "
                 style={{
-                  filter: "drop-shadow(9px 9px 8px #010101)",
+                  filter: "drop-shadow(3px 3px 3px #010101)",
                 }}
               >
-                <img src={logo} className="h-12 logo" alt="" />
+                <img src={logo} className="h-10 logo" alt="" />
               </Link>
             </li>
             <li
@@ -65,8 +51,8 @@ const Navbar = () => {
             >
               <Link
                 style={{
-                  fontWeight: "400",
-                  fontSize: "1em",
+                  fontWeight: "600",
+                  fontSize: "0.9em",
                   filter: "drop-shadow(9px 9px 8px #010101)",
                 }}
                 to="/"
@@ -78,28 +64,14 @@ const Navbar = () => {
             <li style={{ marginRight: "-1em" }}>
               <Link
                 style={{
-                  fontWeight: "400",
-                  fontSize: "1em",
+                  fontWeight: "600",
+                  fontSize: "0.9em",
                   filter: "drop-shadow(9px 9px 8px #010101)",
                 }}
                 to="/about"
                 className="block py-2 px-3  rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-pink-200 dark:hover:bg-transparent"
               >
                 About
-              </Link>
-            </li>
-            <li style={{ marginRight: "-1em" }}>
-              <Link
-                style={{
-                  fontWeight: "400",
-                  fontSize: "1em",
-                  filter: "drop-shadow(9px 9px 8px #010101)",
-                }}
-                to="/faqs"
-                className="block py-2 px-3  rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-pink-200 dark:hover:bg-transparent"
-                aria-current="page"
-              >
-                FAQs
               </Link>
             </li>
             {/* <li style={{ marginRight: "-1em" }}>
@@ -113,15 +85,14 @@ const Navbar = () => {
                 className="block py-2 px-3  rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-pink-200 dark:hover:bg-transparent"
                 aria-current="page"
               >
-                Services
+                FAQs
               </Link>
             </li> */}
-
             <li style={{ marginRight: "-1em" }}>
               <Link
                 style={{
-                  fontWeight: "400",
-                  fontSize: "1em",
+                  fontWeight: "600",
+                  fontSize: "0.9em",
                   filter: "drop-shadow(9px 9px 8px #010101)",
                 }}
                 to="/portfolio"
@@ -133,8 +104,8 @@ const Navbar = () => {
             <li style={{ marginRight: "-1em" }}>
               <Link
                 style={{
-                  fontWeight: "400",
-                  fontSize: "1em",
+                  fontWeight: "600",
+                  fontSize: "0.9em",
                   filter: "drop-shadow(9px 9px 8px #010101)",
                 }}
                 to="/contact"
@@ -146,8 +117,8 @@ const Navbar = () => {
             <li style={{ marginRight: "-1em" }}>
               <Link
                 style={{
-                  fontWeight: "400",
-                  fontSize: "1em",
+                  fontWeight: "600",
+                  fontSize: "0.9em",
                   filter: "drop-shadow(9px 9px 14px #010101)",
                 }}
                 to="/blogs"

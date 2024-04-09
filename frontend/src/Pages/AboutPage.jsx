@@ -2,23 +2,28 @@ import React from "react";
 import Hero from "../Components/Hero";
 import Footer from "../Components/Footer";
 import Navbar from "../Components/Navbar";
+import Avatar from "../Components/Avatar";
 function AboutPage() {
   return (
     <>
       <div className="overflow-x-hidden">
         <Hero />
+
         <div className="h-auto w-auto z-1 relative">
           <Navbar />
         </div>
         <div className="relative sm:mx-0 md:mx-6 lg:mx-24 xl:mx-78 2xl:mx-88 4xl:mx-98 imac:mx-180">
-          <div className="relative z-1 flex flex-col justify-center items-center  p-20 mx-auto">
+          <div className="relative z-1 flex flex-col justify-center items-center p-7 sm:p-12 mx-auto">
             <p
               className="text-[#e55db2] text-3xl font-bold"
               style={{ fontFamily: "Bebas Neue" }}
             >
               What is CC ?{" "}
             </p>
-            <p className="text-xl text-white my-5 font-normal">
+            <p
+              className="text-xl text-white my-5 font-normal"
+              style={{ filter: "drop-shadow(9px 9px 14px #010101)" }}
+            >
               Founded in 2023, Curious Capital is a private limited company and
               a dynamic firm with alacrity to adapt to the ever changing
               financial world. Our trading desk executes automated and
@@ -43,6 +48,11 @@ function AboutPage() {
               position our clients for success in this dynamic financial
               landscape.
             </p>
+            {/* <div className='relative z-1 flex gap-5 rounded-full'>
+          <Avatar />
+          <Avatar/>
+          <Avatar/>
+        </div> */}
           </div>
         </div>
 

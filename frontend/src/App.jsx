@@ -10,6 +10,7 @@ import Contact from "./Pages/Contact";
 // import Navbar from "./Components/Navbar";
 import { BackgroundProvider } from "./BackgroundContext.jsx";
 import FaqPage from "./Pages/FaqPage.jsx";
+import Avatar from "./Components/Avatar.jsx";
 
 function App() {
   return (

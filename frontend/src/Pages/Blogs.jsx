@@ -2,30 +2,30 @@ import React from "react";
 import Hero from "../Components/Hero";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
-import "./Css/Blogs.css";
 import { Link } from "react-router-dom";
-import { useState,useEffect } from "react";
-import moment from 'moment'
+import { useState, useEffect } from "react";
+import moment from "moment";
 const cmsHost = import.meta.env.VITE_CMS_DOMAIN;
-const cmsUsername = import.meta.env.VITE_CMS_USERNAME || 'TEST';
+const cmsUsername = import.meta.env.VITE_CMS_USERNAME || "ADMIN";
 function Blogs() {
-  const [blogs, setBlogs] = useState([])
-  const [loading, setLoading] = useState(true)
+  const [blogs, setBlogs] = useState([]);
+  const [loading, setLoading] = useState(true);
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`${cmsHost}/api/blog/author/${cmsUsername}`);
+        const response = await fetch(
+          `${cmsHost}/api/blog/author/${cmsUsername}`
+        );
         const jsonData = await response.json();
         setBlogs(jsonData);
         setLoading(false);
       } catch (error) {
-        console.error('Error fetching data:', error);
+        console.error("Error fetching data:", error);
       }
     };
 
     fetchData();
   }, []);
-
 
   return (
     <div>
@@ -43,7 +43,7 @@ function Blogs() {
             BLOGS
           </p>
           <section className="text-gray-400 bg-transparent body-font overflow-hidden ">
-            <div className="container px-5 py-24 mx-auto blog-bg">
+            <div className="mx-3 p-20 sm:px-5 sm:py-24 blog-bg">
               <div className="-my-8 divide-y-2 divide-gray-800 ">
                 {blogs.map((blog, index) => (
                   <div
@@ -51,12 +51,12 @@ function Blogs() {
                     className="py-8 flex flex-wrap md:flex-nowrap"
                   >
                     <div className="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
-                      <span className="mt-1 text-white text-sm">
-                        {moment(blog.createdAt).format('DD MMM, YY')}
+                      <span className="mt-1 mr-3 break-all text-white text-sm">
+                        {moment(blog.createdAt).format("DD MMM, YY")}
                       </span>
                     </div>
                     <div className="md:flex-grow">
-                      <h2 className="text-2xl font-medium text-white title-font mb-2">
+                      <h2 className="text-xl font-medium text-white title-font mb-2">
                         {blog.title}
                       </h2>
                       <Link
