@@ -51,8 +51,8 @@ const Blog = () => {
                             <img alt="Image" className='py-6 drop-shadow-xl' src={blog.imgUrl} />
                         </div>}
                         <div className='flex justify-center w-full'>
-                            <div style={{ fontFamily: "Bebas Neue" }} id='blogContent' className='shadow-lg overflow-hidden h-max font-lora p-4 pb-28 lg:pb-14 leading-loose box-shadow-lg bg-transparent text-justify resize-none '>
-                                <ReactMarkdown children={blog.content} rehypePlugins={[rehypeRaw]} />
+                            <div style={{ fontFamily: "Bebas Neue" }}  className='shadow-lg overflow-hidden h-max font-lora p-4 pb-28 lg:pb-14 leading-loose box-shadow-lg bg-transparent text-justify resize-none '>
+                                <div id='blog' dangerouslySetInnerHTML={{__html: blog.content}}></div>
                             </div>
                         </div>
                     </div>
