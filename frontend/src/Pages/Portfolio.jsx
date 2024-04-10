@@ -114,7 +114,7 @@ function Portfolio() {
             </p>
           
             <p
-              className="text-xl text-white  font-normal text-justify"
+              className="text-xl text-white  font-normal text-justify "
               style={{ fontFamily: "Inter" }}
             >
               Discover the strategic mix of assets driving performance at Curious Capital.

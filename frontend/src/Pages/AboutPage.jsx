@@ -21,7 +21,7 @@ function AboutPage() {
               What is Curious Capital ?{" "}
             </p>
             <p
-              className="text-xl text-white my-5 font-normal"
+              className="text-xl text-white my-5 font-normal sm:text-justify"
               style={{ filter: "drop-shadow(9px 9px 14px #010101)" }}
             >
               Founded in 2023, Curious Capital is a private limited company and
@@ -38,10 +38,10 @@ function AboutPage() {
             >
               What’s unique about Curious Capital ?{" "}
             </p>
-            <p className="text-xl text-white my-5 font-normal">
+            <p className="text-xl text-white my-5 font-normal sm:text-justify">
               By strategically allocating a significant portion of our
               investments to non-traditional spaces like cryptocurrencies, DeFi,
-              and Web3, Curious Capital offers a compelling opportunity for
+              and Web3 , Curious Capital offers a compelling opportunity for
               investors seeking exposure to alternative assets. We leverage
               meticulously crafted and rigorously tested revenue models,
               investment strategies, and robust risk management frameworks to
