@@ -1,14 +1,34 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/Curious Capital Logo (Final) W.png";
 import "./Navbar.css";
+import { useLocation } from 'react-router-dom';
+
 const Navbar = () => {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(window.matchMedia("(max-width: 768px)").matches ? true : false);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
+  
+  useEffect(() => {
+    // Update state based on window size
+    const handleResize = () => {
+      setIsMobileMenuOpen(window.matchMedia("(max-width: 768px)").matches);
+    };
+    
+    // Add event listener for window resize
+    window.addEventListener("resize", handleResize);
+  
+    // Cleanup on component unmount
+    return () => window.removeEventListener("resize", handleResize);
+  }, []); 
 
+  useEffect(() => {
+    // Close mobile menu when location changes
+    setIsMobileMenuOpen(false);
+  }, [location]);
   return (
     <nav style={{ backgroundColor: "rgba(0,0,0,0.15)" }} className="navi">
       <div className="max-w-screen-xl lg:mx-auto p-7 custom-nav">
